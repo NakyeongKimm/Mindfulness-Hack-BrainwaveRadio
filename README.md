@@ -17,11 +17,9 @@ Mindfulness-Hack-BrainwaveRadio/
 │   ├── community_sound.py     # Real-time community sound (requires server)
 │   └── test_brainwave.py      # Test with hardcoded data
 ├── data/                       # Collected EEG data (CSV files)
-│   └── eeg_data_*.csv         # Auto-generated timestamped files
+│   └── sample_happy.csv         # Sample csv file
 ├── radios/                     # Generated music files
-│   ├── session*_*.wav         # Individual person music
-│   ├── community_sound.wav    # Community aggregated music
-│   └── test_output_*.wav      # Test output files
+│   ├── session*_*.wav         # Sample audio file
 └── README.md                   # This file
 ```
 
