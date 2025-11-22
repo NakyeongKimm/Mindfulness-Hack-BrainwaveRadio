@@ -118,7 +118,7 @@ async def main():
     generator = MusicGenerator()
     
     # Create radios folder if it doesn't exist
-    os.makedirs("radios", exist_ok=True)
+    os.makedirs("../radios", exist_ok=True)
     
     # Use only the community's most common emotion
     community_emotions = [most_common_emotion]
@@ -126,7 +126,7 @@ async def main():
     generator.generate_music(
         emotions=community_emotions, 
         duration=30,  # Longer for community sound
-        filename="radios/community_sound.wav"
+        filename="../radios/community_sound.wav"
     )
     
     print("Community Sound generated: radios/community_sound.wav")

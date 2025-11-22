@@ -1,0 +1,13 @@
+# Music generation
+torch>=2.0.0
+transformers>=4.30.0
+
+# Audio processing
+scipy>=1.10.0
+numpy<2.0,>=1.26.0
+
+# WebSocket streaming
+websockets>=11.0
+
+# Data handling
+pandas>=2.0.0

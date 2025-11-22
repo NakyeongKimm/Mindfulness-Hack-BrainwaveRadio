@@ -86,14 +86,13 @@ def process_community_from_csv(csv_filename):
     print(f"Total People: {len(sessions)}")
     print(f"Most Common Emotion: {most_common_emotion}")
     print(f"Emotion Distribution: {dict(emotion_counts)}")
-    print(f"{'='*60}\n")
     
     # Generate "Community Sound"
     print(f"Generating 'Community Sound'...")
     generator = MusicGenerator()
     
     # Create radios folder if it doesn't exist
-    os.makedirs("radios", exist_ok=True)
+    os.makedirs("../radios", exist_ok=True)
     
     # Use only the community's most common emotion
     community_emotions = [most_common_emotion]
@@ -101,7 +100,7 @@ def process_community_from_csv(csv_filename):
     generator.generate_music(
         emotions=community_emotions, 
         duration=30,
-        filename="radios/community_sound.wav"
+        filename="../radios/community_sound.wav"
     )
     
     print("Community Sound generated: radios/community_sound.wav")

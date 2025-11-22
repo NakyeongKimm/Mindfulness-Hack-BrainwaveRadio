@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 import time
 
-HUB_IP = "your_hub_ip"
+HUB_IP = "stream2.mindfulmakers.xyz"
 
 def save_to_csv(data, filename):
     """
@@ -106,11 +106,11 @@ async def main():
     num_samples = int(input("How many data points to collect? (e.g., 100): ").strip())
     
     # Create data folder if it doesn't exist
-    os.makedirs("data", exist_ok=True)
+    os.makedirs("../data", exist_ok=True)
     
     # Create CSV filename with timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    csv_filename = f"data/eeg_data_{timestamp}.csv"
+    csv_filename = f"../data/eeg_data_{timestamp}.csv"
     
     print(f"Will save to: {csv_filename}")
     print(f"Auto-save: Every 10 points")

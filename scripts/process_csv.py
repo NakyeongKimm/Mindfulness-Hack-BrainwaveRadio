@@ -28,7 +28,7 @@ def process_from_csv(csv_filename):
     generator = MusicGenerator()
     
     # Create radios folder
-    os.makedirs("radios", exist_ok=True)
+    os.makedirs("../radios", exist_ok=True)
     
     # Track sessions
     sessions = []
@@ -74,10 +74,10 @@ def process_from_csv(csv_filename):
                 # Handle duplicates
                 if base_name in filename_counts:
                     filename_counts[base_name] += 1
-                    filename = f"radios/{base_name}_{filename_counts[base_name]}.wav"
+                    filename = f"../radios/{base_name}_{filename_counts[base_name]}.wav"
                 else:
                     filename_counts[base_name] = 0
-                    filename = f"radios/{base_name}.wav"
+                    filename = f"../radios/{base_name}.wav"
                 
                 print(f"Generating music for {all_emotions}...")
                 generator.generate_music(all_emotions, duration=20, filename=filename)
@@ -118,10 +118,10 @@ def process_from_csv(csv_filename):
         # Handle duplicates
         if base_name in filename_counts:
             filename_counts[base_name] += 1
-            filename = f"radios/{base_name}_{filename_counts[base_name]}.wav"
+            filename = f"../radios/{base_name}_{filename_counts[base_name]}.wav"
         else:
             filename_counts[base_name] = 0
-            filename = f"radios/{base_name}.wav"
+            filename = f"../radios/{base_name}.wav"
         
         print(f"Generating music for {all_emotions}...")
         generator.generate_music(all_emotions, duration=20, filename=filename)

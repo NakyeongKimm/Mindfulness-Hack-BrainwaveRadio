@@ -20,7 +20,7 @@ async def main():
     ssl_context.verify_mode = ssl.CERT_NONE
     
     # Create radios folder if it doesn't exist
-    os.makedirs("radios", exist_ok=True)
+    os.makedirs("../radios", exist_ok=True)
     
     # Initialize generator once (loads model)
     print("Initializing MusicGen model...")
@@ -92,10 +92,10 @@ async def main():
                             # Handle duplicates
                             if base_name in filename_counts:
                                 filename_counts[base_name] += 1
-                                filename = f"radios/{base_name}_{filename_counts[base_name]}.wav"
+                                filename = f"../radios/{base_name}_{filename_counts[base_name]}.wav"
                             else:
                                 filename_counts[base_name] = 0
-                                filename = f"radios/{base_name}.wav"
+                                filename = f"../radios/{base_name}.wav"
                             
                             print(f"\nGenerating music for {all_emotions}...")
                             generator.generate_music(all_emotions, duration=20, filename=filename)
