@@ -2,6 +2,8 @@
 
 Generate music from EEG brainwave data using Meta's MusicGen model.
 
+Check our demo: https://www.figma.com/proto/1aJlm5AKHwtTGDSrztZMKc/Brainwave-Radio?node-id=0-1&t=Zu52wPhsLEi8PjEm-1
+
 ## Directory Structure
 
 ```
