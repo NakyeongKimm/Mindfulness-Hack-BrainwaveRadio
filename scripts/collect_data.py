@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 import time
 
-HUB_IP = "stream2.mindfulmakers.xyz"
+HUB_IP = "your_hub_ip"
 
 def save_to_csv(data, filename):
     """
